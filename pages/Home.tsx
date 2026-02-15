@@ -53,6 +53,61 @@ export const Home: React.FC = () => {
   const heroRef = React.useRef<HTMLDivElement>(null);
   const backgroundRef = React.useRef<HTMLDivElement>(null);
 
+  const clientLogoFiles = [
+    '1.png',
+    '2.png',
+    '2 (1).png',
+    '3.png',
+    '3 (1).png',
+    '4.png',
+    '5.png',
+    '5 (1).png',
+    '6.png',
+    '7.png',
+    '8.png',
+    '8 (1).png',
+    '8PM.png',
+    '9.png',
+    '9 (1).png',
+    '10.png',
+    '11.png',
+    '13-logo.jpg',
+    'Adda52.png',
+    'Anytime-Fitness.png',
+    'Apollo-pharmacy.png',
+    'Balaji-Logo-1.png',
+    'CII.png',
+    'Divine-Solitaires-3.png',
+    'Fortis.png',
+    'Gleneagles-Hospitals-3.png',
+    'HDFC.png',
+    'Health-Ways-Dairy.png',
+    'HERO.png',
+    'Leela-Ambience-convention-hotel.png',
+    'Magic-Moments.png',
+    'MANKIND-PHARMA-3.png',
+    'newyukti.png',
+    'nh-logo-2.jpg',
+    'Paras.png',
+    'rr-logo.png',
+    'Shiftpurple.png',
+    'ss-logo.jpg',
+    'Topps-Logo-1.png',
+    'Untitled-1.png'
+  ];
+
+  const clientLogos = clientLogoFiles.map((file) => ({
+    src: encodeURI(`/assets/images/clients/${file}`),
+    alt: file
+      .replace(/\.(png|jpg|jpeg|webp|svg)$/i, '')
+      .replace(/\s*\(\d+\)\s*/g, ' ')
+      .replace(/[-_]/g, ' ')
+      .trim() || 'Client logo'
+  }));
+
+  const topRowLogos = clientLogos.slice(0, 20);
+  const bottomRowLogos = clientLogos.slice(20, 40).reverse();
+
   React.useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
@@ -153,17 +208,17 @@ export const Home: React.FC = () => {
               {
                 title: "Service as an Agent",
                 desc: "We don’t just build services; we productize services into intelligent agents. Nextdot operates at the intersection of AI engineering and productization, transforming domain expertise into deployable AI products.",
-                image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800"
+                image: "/assets/images/service_aggent.png"
               },
               {
                 title: "Domain First Engineering",
                 desc: "Focused on healthcare, compliance, and regulated ecosystems. Our models are trained and structured around rigorous domain logic, not just generic prompts.",
-                image: "https://images.unsplash.com/photo-1576091160550-217358c7db81?auto=format&fit=crop&q=80&w=800"
+                image: "/assets/images/domain_engg.png"
               },
               {
                 title: "Production over Experimentation",
                 desc: "We build deployable systems, not experimental AI demos. We consciously distance ourselves from generic automation vendors, prompt wrapper startups, and low-cost dev shops.",
-                image: "https://images.unsplash.com/photo-1558494949-ef526b0042a0?auto=format&fit=crop&q=80&w=800"
+                image: "/assets/images/pp_over_exp.png"
               }
             ].map((item, idx) => (
               <div key={idx} className={`reveal-on-scroll delay-${(idx + 1) * 100} group bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col`}>
@@ -195,7 +250,7 @@ export const Home: React.FC = () => {
             <Link to="/solutions/engineering" className="reveal-on-scroll delay-100 group block">
                <div className="relative aspect-square overflow-hidden rounded-2xl mb-6 shadow-md group-hover:shadow-xl transition-all duration-500">
                   <img 
-                    src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800"
+                    src="/assets/images/AI_ENGG.png"
                     alt="AI Engineering" 
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
                   />
@@ -214,7 +269,7 @@ export const Home: React.FC = () => {
             <Link to="/solutions/healthcare/compliance" className="reveal-on-scroll delay-200 group block">
                <div className="relative aspect-[4/5] overflow-hidden rounded-2xl mb-6 shadow-md group-hover:shadow-xl transition-all duration-500">
                   <img 
-                    src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800"
+                    src="/assets/images/AI_healthcare.png"
                     alt="AI Healthcare" 
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
                   />
@@ -325,17 +380,15 @@ export const Home: React.FC = () => {
 
             {/* Visual Side - Video Display */}
             <div className="lg:w-1/2 w-full reveal-on-scroll delay-200">
-               <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-700 bg-gray-800/80 aspect-[4/3] group hover:border-blue-500/50 transition-colors duration-500 hover:scale-[1.01] transition-transform">
+               <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-700 bg-gray-900 aspect-video group hover:border-blue-500/50 transition-colors duration-500 hover:scale-[1.01] transition-transform">
                   <video 
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                     autoPlay 
                     muted 
                     loop 
                     playsInline
-                    poster="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800"
                   >
-                    {/* Placeholder tech video - Replace with actual dashboard recording */}
-                    <source src="https://assets.mixkit.co/videos/preview/mixkit-software-interface-scrolling-on-computer-screen-29774-large.mp4" type="video/mp4" />
+                    <source src="/assets/videos/NMc%20video.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
                   {/* Overlay to ensure consistency with dark theme */}
@@ -366,25 +419,25 @@ export const Home: React.FC = () => {
                 title: "Secure Data Layer",
                 desc: "RAG pipelines with strict permission boundaries. We isolate context to ensure models only know what they need to know.",
                 step: "01",
-                image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800"
+                image: "/assets/images/secure_data_layer.png"
               },
               {
                 title: "Orchestration",
                 desc: "Multi-model routing logic. We decouple intelligence from the provider, allowing seamless model swapping and fallback.",
                 step: "02",
-                image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=800"
+                image: "/assets/images/Orchestration.png"
               },
               {
                 title: "Governance & Validation",
                 desc: "Deterministic guardrails and human-in-the-loop workflows to catch hallucinations before they reach the user.",
                 step: "03",
-                image: "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&q=80&w=800"
+                image: "/assets/images/Governance_Validation.png"
               },
               {
                 title: "Observability",
                 desc: "Full trace logging and semantic monitoring. We track drift, latency, and cost in real-time.",
                 step: "04",
-                image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800"
+                image: "/assets/images/Observability.png"
               }
             ].map((item, idx) => (
               <div 
@@ -441,11 +494,11 @@ export const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal-on-scroll">
           <div className="bg-white rounded-[40px] p-2 shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-500">
             <div className="grid lg:grid-cols-2">
-              <div className="relative h-64 lg:h-auto overflow-hidden rounded-[32px] group">
+              <div className="relative h-64 md:h-80 lg:h-[420px] w-full overflow-hidden rounded-[32px] group">
                 <img 
-                  src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Skyline_at_Jamshedpur.jpg" 
-                  alt="Jamshedpur Skyline" 
-                  className="absolute inset-0 w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  src="/assets/images/Applied_Ai_Infra.png" 
+                  alt="Applied AI Infrastructure" 
+                  className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-8">
                    <span className="text-white/80 text-sm font-medium tracking-wider uppercase mb-1">Capability Hub</span>
@@ -473,15 +526,52 @@ export const Home: React.FC = () => {
 
       {/* SECTION 7: TRUST */}
       <section className="relative z-10 py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal-on-scroll">
+        <div className="w-full text-center reveal-on-scroll">
           <p className="text-gray-400 font-medium mb-10">TRUSTED BY LEADING ENTERPRISES AND OPERATORS</p>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-             {/* Simple Text Placeholders for Logos to keep it clean */}
-             {['Acme Corp', 'HealthPlus', 'MediCare', 'Global Tech', 'CreativeSt', 'Logistics.ai'].map((logo) => (
-               <div key={logo} className="h-12 flex items-center justify-center font-bold text-xl text-gray-300 hover:text-gray-900 hover:scale-105 transition-all cursor-default">
-                 {logo}
-               </div>
-             ))}
+          <style>{`
+            @keyframes logo-marquee {
+              from { transform: translateX(-50%); }
+              to { transform: translateX(0%); }
+            }
+            @keyframes logo-marquee-reverse {
+              from { transform: translateX(0%); }
+              to { transform: translateX(-50%); }
+            }
+            .logo-marquee { position: relative; overflow: hidden; }
+            .logo-track { display: flex; width: max-content; will-change: transform; }
+            .logo-marquee:hover .logo-track { animation-play-state: paused; }
+            @media (prefers-reduced-motion: reduce) {
+              .logo-track { animation: none !important; transform: translateX(0) !important; }
+            }
+          `}</style>
+          <div className="logo-marquee">
+            <div className="logo-track gap-10 md:gap-12 py-4 animate-[logo-marquee_55s_linear_infinite]">
+              {[...topRowLogos, ...topRowLogos].map((logo, idx) => (
+                <div key={`row-1-${idx}`} className="h-10 sm:h-12 md:h-14 flex items-center justify-center px-2">
+                  <img
+                    src={logo.src}
+                    alt={logo.alt}
+                    className="h-full w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300"
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="logo-marquee mt-6">
+            <div className="logo-track gap-10 md:gap-12 py-4 animate-[logo-marquee-reverse_55s_linear_infinite]">
+              {[...bottomRowLogos, ...bottomRowLogos].map((logo, idx) => (
+                <div key={`row-2-${idx}`} className="h-10 sm:h-12 md:h-14 flex items-center justify-center px-2">
+                  <img
+                    src={logo.src}
+                    alt={logo.alt}
+                    className="h-full w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300"
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -505,7 +595,7 @@ export const Home: React.FC = () => {
              <Button variant="white" className="h-14 px-10 text-lg">
                 Book a Call
              </Button>
-             <span className="text-gray-500 text-sm mt-4 sm:mt-0">or contact sales@nextdot.ai</span>
+             <span className="text-gray-500 text-sm mt-4 sm:mt-0">or <a href="mailto:contact@nextdot.co.in" className="hover:text-white transition-colors">contact@nextdot.co.in</a></span>
           </div>
         </div>
       </section>

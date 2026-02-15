@@ -10,6 +10,9 @@ export const Contact: React.FC = () => {
           <p className="text-gray-600">
             Discuss your AI roadmap with our engineering team. No sales fluff.
           </p>
+          <p className="text-gray-500 text-sm mt-4">
+            Or email us directly at <a href="mailto:contact@nextdot.co.in" className="font-semibold text-blue-600 hover:text-blue-700 transition-colors">contact@nextdot.co.in</a>
+          </p>
         </div>
 
         <form className="space-y-6 bg-white p-8 md:p-12 rounded-3xl border border-gray-200 shadow-xl reveal-on-scroll delay-100 hover:shadow-2xl transition-shadow duration-500">

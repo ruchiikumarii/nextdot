@@ -25,7 +25,7 @@ const navigation: NavItem[] = [
       { label: 'AI for Creative and Media', href: '/solutions/creative' }
     ]
   },
-  { label: 'AI Capability Center', href: '/capability-center' },
+  { label: 'AI Capability Center', href: '/ai-capability-center' },
   { label: 'Clientele', href: '/clientele' },
   {
     label: 'Resources',

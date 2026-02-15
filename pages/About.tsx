@@ -1,5 +1,6 @@
 import React from 'react';
-import { ArrowRight, User, Target, Zap, Plus } from 'lucide-react';
+import { ArrowRight, Target, Zap, Plus } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { Button } from '../components/ui/Button';
 
 export const About: React.FC = () => {
@@ -7,13 +8,24 @@ export const About: React.FC = () => {
     <div className="bg-white pt-24">
       {/* Hero */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-8 leading-tight reveal-on-scroll">
-          We exist to prevent <br/>
-          <span className="text-gray-500">irresponsible automation.</span>
-        </h1>
-        <p className="text-xl text-gray-600 max-w-3xl leading-relaxed reveal-on-scroll delay-100">
-          The market is flooded with prompt wrappers and fragile demos. We build rigorous, domain-engineered AI systems that enterprises can actually trust in production.
-        </p>
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-8 leading-tight reveal-on-scroll">
+              We exist to prevent <br/>
+              <span className="text-gray-500">irresponsible automation.</span>
+            </h1>
+            <p className="text-xl text-gray-600 max-w-2xl leading-relaxed reveal-on-scroll delay-100">
+              The market is flooded with prompt wrappers and fragile demos. We build rigorous, domain-engineered AI systems that enterprises can actually trust in production.
+            </p>
+          </div>
+          <div className="hidden md:flex items-center justify-center reveal-on-scroll delay-200">
+            <img 
+              src="/assets/images/Logoblack.jpg.jpeg" 
+              alt="Nextdot - Responsible AI" 
+              className="w-full h-auto max-w-sm rounded-xl object-contain"
+            />
+          </div>
+        </div>
       </section>
 
       {/* Philosophy / Service as an Agent */}
@@ -82,26 +94,6 @@ export const About: React.FC = () => {
         </div>
       </section>
 
-      {/* Leadership */}
-      <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold mb-12 reveal-on-scroll">Leadership</h2>
-        <div className="grid md:grid-cols-3 gap-8">
-           {[1, 2, 3].map((i) => (
-             <div key={i} className="group cursor-default reveal-on-scroll" style={{ transitionDelay: `${i * 100}ms` }}>
-               <div className="aspect-[4/5] bg-gray-100 rounded-2xl mb-6 overflow-hidden relative shadow-md group-hover:shadow-2xl transition-all duration-500">
-                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
-                 <div className="absolute inset-0 flex items-center justify-center text-gray-300 bg-gray-200 group-hover:scale-105 transition-transform duration-700">
-                    <User size={64} className="text-gray-400" />
-                 </div>
-                 {/* Social links appearing on hover could go here */}
-               </div>
-               <h3 className="text-xl font-bold group-hover:text-blue-600 transition-colors">Executive Name</h3>
-               <p className="text-gray-500 text-sm">Founding Partner</p>
-             </div>
-           ))}
-        </div>
-      </section>
-
       {/* Evolution (Redesigned - Clean & Minimal) */}
       <section className="py-32 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden border-t border-gray-200">
         <style>{`
@@ -166,10 +158,7 @@ export const About: React.FC = () => {
              </div>
 
              {/* 4. Result (Nextdot | AI Capability Center) - BIGGER */}
-             <div 
-               className="w-full lg:flex-1 max-w-lg lg:h-32 relative group animate-slide-right"
-               style={{ animationDelay: '600ms' }}
-             >
+             <Link to="/ai-capability-center" className="w-full lg:flex-1 max-w-lg lg:h-32 relative group animate-slide-right cursor-pointer" style={{ animationDelay: '600ms' }}>
                 <div className="absolute inset-0 bg-blue-600/20 blur-xl rounded-full transform scale-75 animate-pulse"></div>
                 <div className="relative bg-gray-900 rounded-2xl p-6 border border-gray-800 shadow-2xl shadow-blue-900/20 hover:shadow-blue-900/40 transition-all duration-500 flex items-center justify-center text-center overflow-hidden h-full transform hover:scale-[1.02]">
                    {/* Animated Gradient Border Effect */}
@@ -179,7 +168,7 @@ export const About: React.FC = () => {
                       <h3 className="text-2xl font-bold text-white tracking-tight leading-tight">Nextdot | AI Capability Center</h3>
                    </div>
                 </div>
-             </div>
+             </Link>
           </div>
         </div>
       </section>

@@ -73,7 +73,7 @@ const App: React.FC = () => {
             <Route path="/solutions/creative" element={<Creative />} />
             
             {/* Other Top Level Pages */}
-            <Route path="/capability-center" element={<CapabilityCenter />} />
+            <Route path="/ai-capability-center" element={<CapabilityCenter />} />
             <Route path="/clientele" element={<Clientele />} />
             <Route path="/contact" element={<Contact />} />
             
