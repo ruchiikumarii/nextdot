@@ -20,7 +20,7 @@ export const About: React.FC = () => {
           </div>
           <div className="hidden md:flex items-center justify-center reveal-on-scroll delay-200">
             <img 
-              src="/assets/images/Logoblack.jpg.jpeg" 
+              src="/images/Logoblack.jpg.jpeg" 
               alt="Nextdot - Responsible AI" 
               className="w-full h-auto max-w-sm rounded-xl object-contain"
             />

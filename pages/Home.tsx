@@ -97,7 +97,7 @@ export const Home: React.FC = () => {
   ];
 
   const clientLogos = clientLogoFiles.map((file) => ({
-    src: encodeURI(`/assets/images/clients/${file}`),
+    src: encodeURI(`/images/clients/${file}`),
     alt: file
       .replace(/\.(png|jpg|jpeg|webp|svg)$/i, '')
       .replace(/\s*\(\d+\)\s*/g, ' ')
@@ -208,17 +208,17 @@ export const Home: React.FC = () => {
               {
                 title: "Service as an Agent",
                 desc: "We don’t just build services; we productize services into intelligent agents. Nextdot operates at the intersection of AI engineering and productization, transforming domain expertise into deployable AI products.",
-                image: "/assets/images/service_aggent.png"
+                image: "/images/service_aggent.png"
               },
               {
                 title: "Domain First Engineering",
                 desc: "Focused on healthcare, compliance, and regulated ecosystems. Our models are trained and structured around rigorous domain logic, not just generic prompts.",
-                image: "/assets/images/domain_engg.png"
+                image: "/images/domain_engg.png"
               },
               {
                 title: "Production over Experimentation",
                 desc: "We build deployable systems, not experimental AI demos. We consciously distance ourselves from generic automation vendors, prompt wrapper startups, and low-cost dev shops.",
-                image: "/assets/images/pp_over_exp.png"
+                image: "/images/pp_over_exp.png"
               }
             ].map((item, idx) => (
               <div key={idx} className={`reveal-on-scroll delay-${(idx + 1) * 100} group bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col`}>
@@ -250,7 +250,7 @@ export const Home: React.FC = () => {
             <Link to="/solutions/engineering" className="reveal-on-scroll delay-100 group block">
                <div className="relative aspect-square overflow-hidden rounded-2xl mb-6 shadow-md group-hover:shadow-xl transition-all duration-500">
                   <img 
-                    src="/assets/images/AI_ENGG.png"
+                    src="/images/AI_ENGG.png"
                     alt="AI Engineering" 
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
                   />
@@ -269,7 +269,7 @@ export const Home: React.FC = () => {
             <Link to="/solutions/healthcare/compliance" className="reveal-on-scroll delay-200 group block">
                <div className="relative aspect-[4/5] overflow-hidden rounded-2xl mb-6 shadow-md group-hover:shadow-xl transition-all duration-500">
                   <img 
-                    src="/assets/images/AI_healthcare.png"
+                    src="/images/AI_healthcare.png"
                     alt="AI Healthcare" 
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
                   />
@@ -388,7 +388,7 @@ export const Home: React.FC = () => {
                     loop 
                     playsInline
                   >
-                    <source src="/assets/videos/NMc%20video.mp4" type="video/mp4" />
+                    <source src="/videos/NMc%20video.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
                   {/* Overlay to ensure consistency with dark theme */}
@@ -419,25 +419,25 @@ export const Home: React.FC = () => {
                 title: "Secure Data Layer",
                 desc: "RAG pipelines with strict permission boundaries. We isolate context to ensure models only know what they need to know.",
                 step: "01",
-                image: "/assets/images/secure_data_layer.png"
+                image: "/images/secure_data_layer.png"
               },
               {
                 title: "Orchestration",
                 desc: "Multi-model routing logic. We decouple intelligence from the provider, allowing seamless model swapping and fallback.",
                 step: "02",
-                image: "/assets/images/Orchestration.png"
+                image: "/images/Orchestration.png"
               },
               {
                 title: "Governance & Validation",
                 desc: "Deterministic guardrails and human-in-the-loop workflows to catch hallucinations before they reach the user.",
                 step: "03",
-                image: "/assets/images/Governance_Validation.png"
+                image: "/images/Governance_Validation.png"
               },
               {
                 title: "Observability",
                 desc: "Full trace logging and semantic monitoring. We track drift, latency, and cost in real-time.",
                 step: "04",
-                image: "/assets/images/Observability.png"
+                image: "/images/Observability.png"
               }
             ].map((item, idx) => (
               <div 
@@ -496,7 +496,7 @@ export const Home: React.FC = () => {
             <div className="grid lg:grid-cols-2">
               <div className="relative h-64 md:h-80 lg:h-[420px] w-full overflow-hidden rounded-[32px] group">
                 <img 
-                  src="/assets/images/Applied_Ai_Infra.png" 
+                  src="/images/Applied_Ai_Infra.png" 
                   alt="Applied AI Infrastructure" 
                   className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-700"
                 />

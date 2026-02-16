@@ -10,7 +10,7 @@ export const Footer: React.FC = () => {
           {/* Brand Column */}
           <div className="col-span-2 lg:col-span-2">
             <div className="flex items-center mb-4">
-               <img src="/assets/images/logo.png" alt="Nextdot" className="h-8 w-auto" />
+               <img src="/images/logo.png" alt="Nextdot" className="h-8 w-auto" />
             </div>
             <p className="text-gray-500 text-sm mb-6 max-w-xs">
               We design and deploy production grade AI systems for regulated enterprises, healthcare operators and creative industries.

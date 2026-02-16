@@ -9,7 +9,7 @@ export const CapabilityCenter: React.FC = () => {
       <section 
         className="relative min-h-[80vh] flex items-center justify-center overflow-hidden"
         style={{
-          backgroundImage: 'linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url(/assets/images/Applied_Ai_Infra.png)',
+          backgroundImage: 'linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url(/images/Applied_Ai_Infra.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center center',
           backgroundRepeat: 'no-repeat'
@@ -33,7 +33,7 @@ export const CapabilityCenter: React.FC = () => {
            <div className="reveal-on-scroll delay-100 group relative bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-gray-200/50 hover:-translate-y-1 transition-all duration-500 cursor-pointer">
               <div className="h-56 overflow-hidden relative">
                  <img 
-                   src="/assets/images/Why_Jamshedpur.jpeg" 
+                   src="/images/Why_Jamshedpur.jpeg" 
                    alt="Why Jamshedpur" 
                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                  />
@@ -50,7 +50,7 @@ export const CapabilityCenter: React.FC = () => {
            <div className="reveal-on-scroll delay-200 group relative bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-gray-200/50 hover:-translate-y-1 transition-all duration-500 cursor-pointer">
               <div className="h-56 overflow-hidden relative">
                  <img 
-                   src="/assets/images/Talent_development.JPG.jpeg" 
+                   src="/images/Talent_development.JPG.jpeg" 
                    alt="Talent Development" 
                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                  />
@@ -67,7 +67,7 @@ export const CapabilityCenter: React.FC = () => {
            <div className="reveal-on-scroll delay-300 group relative bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-gray-200/50 hover:-translate-y-1 transition-all duration-500 cursor-pointer">
               <div className="h-56 overflow-hidden relative">
                  <img 
-                   src="/assets/images/Enterprise_build.jpeg" 
+                   src="/images/Enterprise_build.jpeg" 
                    alt="Enterprise Build" 
                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                  />

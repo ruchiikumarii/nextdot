@@ -97,7 +97,7 @@ export const Navbar: React.FC = () => {
           {/* LEFT: Logo Section (Flex-1 ensures it takes equal space to Right section for centering Middle) */}
           <div className="flex-1 flex justify-start items-center min-w-0">
             <Link to="/" className="flex items-center group transition-opacity hover:opacity-80">
-               <img src="/assets/images/logo.png" alt="Nextdot" className="h-8 md:h-10 w-auto" />
+               <img src="/images/logo.png" alt="Nextdot" className="h-8 md:h-10 w-auto" />
             </Link>
           </div>
 
